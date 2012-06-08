@@ -12,7 +12,7 @@ function ListCtrl($scope, Elastic) {
         'port': '9200',
         'query': '{}',
         'method': 'get',
-        'path': 'contacts/contact/_search'
+        'path': 'twitter/tweet/_search'
     };
 
     $scope.queryDisabled = function() {
