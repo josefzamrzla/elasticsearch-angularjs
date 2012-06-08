@@ -10,9 +10,9 @@ function ListCtrl($scope, Elastic) {
     $scope.params = {
         'host': 'localhost',
         'port': '9200',
-        'query': '{}',
+        'query': '{ "query" : { "match_all" : {}}}',
         'method': 'get',
-        'path': 'twitter/tweet/_search'
+        'path': '_search'
     };
 
     $scope.queryDisabled = function() {
