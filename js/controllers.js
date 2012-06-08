@@ -45,7 +45,7 @@ function ListCtrl($scope, Elastic) {
             break;
 
             case 'delete':
-
+                Elastic.delete($scope.params, $scope.succesCallback, $scope.errorCallback);
             break;
 
             default:

@@ -8,9 +8,7 @@ angular.module('elastic', ['ngResource']).
                 {port: params.port},
                 {get:{method:'GET'}});
 
-
             r.get({}, successCallback, errorCallback);
-
         }
 
         Elastic.prototype.post = function(params, data, successCallback, errorCallback) {
@@ -21,8 +19,12 @@ angular.module('elastic', ['ngResource']).
                 success(successCallback).error(errorCallback);
         }
 
-        // TODO
-        Elastic.prototype.delete = function(id, callback) {}
+        Elastic.prototype.delete = function(params, successCallback, errorCallback) {
+
+            $http.delete('http://' + params.host + ':' + params.port + '/' + params.path,
+                {headers:{'Content-Type':'text/plain'}, data: {}}).
+                success(successCallback).error(errorCallback);
+        }
 
         return new Elastic();
     });
