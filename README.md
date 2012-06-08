@@ -1,4 +1,4 @@
 elasticsearch-angularjs
 =======================
 
-Elasticsearch AngularJS client
+Very simple Elasticsearch client in AngularJS
