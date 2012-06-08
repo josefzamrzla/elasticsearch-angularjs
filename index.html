@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="esClient">
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/angular-1.0.0rc10.min.js"></script>
+    <script src="js/angular-resource-1.0.0rc10.min.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/elastic.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container">
+                <a href="#/query" class="brand">Elasticsearch AngularJS client</a>
+                <div class="nav-collapse">
+                <ul class="nav">
+                    <li><a href="#/query">Query</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-view></div>
+
+</div>
+</body>
+</html>
